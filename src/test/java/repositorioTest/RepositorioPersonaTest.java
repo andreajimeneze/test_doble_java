@@ -4,6 +4,9 @@ import modelo.Persona;
 import org.junit.jupiter.api.Test;
 import repositorio.RepositorioPersona;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -41,5 +44,14 @@ public class RepositorioPersonaTest {
         String resultadoTest = repositorioPersona.eliminarPersona(juanito);
         assertEquals("Persona eliminada", resultadoTest);
         verify(repositorioPersona).eliminarPersona(juanito);
+    }
+
+    @Test
+    public void testListarPersonas() {
+        Map<String, String> objectDb = new HashMap<>();
+        when(repositorioPersona.listarPersonas()).thenReturn(objectDb);
+        Map<String, String> resultadoTest = repositorioPersona.listarPersonas();
+        assertEquals(objectDb, resultadoTest);
+        verify(repositorioPersona).listarPersonas();
     }
 }
