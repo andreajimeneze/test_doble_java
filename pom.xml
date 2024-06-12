@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cl.praxis</groupId>
-  <artifactId>gs-tdd</artifactId>
+  <artifactId>gs-tdd-Persona</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
